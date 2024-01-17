@@ -1,0 +1,18 @@
+extends ./views/layout/_dashboard
+append stylesheet
+ link(rel="stylesheet", href="./style/playlist.css")
+block main
+ .playlist-header 
+   .playlist-left 
+    .playlist-heading Playlist
+    .playlist-clone Hear your own playlists and the playlists you’ve liked
+   .playlist-right
+    .playlist-dropdown-all 
+     .playlist-dropdown All
+     img.playlist-dropdown-icon(src="./images/dropdown.png")
+    ul.playlist-dropdown-list
+     each dropdown in ["learning Podcast", "Health & Fitness", "Health & Fitness", "Business Development", "Business Development"] 
+      li.playlist-dropdown-list-item= dropdown
+ .playlist 
+  each val in [1, 2, 3, 4, 5, 6, 7, 8]
+   +playlistItem

@@ -1,0 +1,293 @@
+:root {
+  --primary-color: #6C5DD3;
+}
+
+:root {
+  --bg-body-color: white;
+  --sidebar-line: #F0F3F6;
+  --search-color: #F0F3F6;
+  --heading-color: hsl(220, 10%, 12%);
+  --feed-color: #5F6164;
+  --feed-name: #1B1D21;
+  --feed-text: #1B1D21;
+  --widget-heading: #1B1D21;
+  --follow-name: #1B1D21;
+  --body-text: #1B1D21;
+  --playlist-shadow: -10px 24px 35px 0px rgba(96, 98, 100, 0.141), -1px -3px 14px 0px rgba(205, 208, 213, 0.103);
+  --playlist-bg: white;
+  --playlist-footer-bg: #F0F3F6;
+  --playlist-all: white;
+  --playlist-text-black: rgba(51, 49, 49, 0.903);
+  --playlist-all-bg: #F8F8F8;
+  --episdes-shadow-all: 24px 35px 0px rgba(227, 230, 236, 0.25), -1px -3px 14px 0px rgba(227, 230, 236, 0.20);
+}
+
+body {
+  color: var(--body-text);
+}
+
+body,
+.sidepar {
+  background-color: var(--bg-body-color);
+}
+
+.sidebar {
+  border-right: 1px solid var(--sidebar-line);
+}
+.sidebar :not(:last-child):after {
+  background-color: var(--sidebar-line);
+}
+
+.header-search {
+  background-color: var(--search-color);
+}
+
+.heading {
+  color: var(--heading-color);
+}
+
+.feed-toogle {
+  color: var(--feel-color);
+}
+.feed-author-name {
+  color: var(--feed-name);
+}
+.feed-item-heading {
+  color: var(--feed-text);
+}
+.feed-item-desc {
+  color: var(--feed-text);
+}
+
+.widget-heading {
+  color: var(--widget-heading);
+}
+
+.follow-user-name {
+  color: var(--follow-name);
+}
+
+.listen-info-heading {
+  color: var(--follow-name);
+}
+
+.play-heading {
+  color: var(--follow-name);
+}
+
+.trending-banner {
+  box-shadow: 0px 24px 44px 0px rgba(0, 0, 0, 0.1);
+}
+
+.playlist-item {
+  background: var(--playlist-bg);
+  box-shadow: var(--playlist-shadow);
+}
+
+.playlist-episode-number {
+  background: var(--playlist-footer-bg);
+}
+
+.playlist-dropdown-list {
+  background-color: var(--playlist-all);
+}
+
+.playlist-dropdown-list-item:hover {
+  color: var(--playlist-text-black);
+}
+
+.playlist-dropdown-all {
+  background-color: var(--playlist-all-bg);
+}
+
+.episdes-all {
+  box-shadow: var(--episdes-shadow-all);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-body-color: #242731;
+    --sidebar-line: #373A43;
+    --search-color: #373A43;
+    --heading-color: white;
+    --feed-color: #E4E4E4;
+    --feed-name: white;
+    --feed-text: white;
+    --widget-heading: white;
+    --follow-name: white;
+    --banner-color: black;
+    --body-text: white;
+    --host-name: #E4E4E4;
+    --feed-border: #373A43;
+    --logo-color: white;
+    --icon-path: #676A6F;
+    --nav-color: #242731;
+    --playlist-bg: #242731;
+    --playlist-shadow: -10px 24px 35px 0px rgba(8, 8, 9, 0.25), -1px -3px 14px 0px rgba(15, 20, 39, 0.20);
+    --playlist-title: white;
+    --playlist-boder: #242731;
+    --playlist-footer-bg: #373A43;
+    --playlist-number: white;
+    --playlist-all: #373A43;
+    --playlist-text-black: white;
+    --playlist-all-bg: #373A43;
+    --trending-title: white;
+    --trending-buttom-text: #A6A7B2;
+    --trending-button-bg: #373A43;
+    --eposdes: white;
+    --dropdown-bg: #373A43;
+    --dropdown-item-bg: #373A43;
+    --dropdown-list-hv: #373A43;
+    --episdes-all-bg: #242731;
+    --episdes-shadow-all: -10px 24px 35px 0px rgba(8, 8, 9, 0.25), -1px -3px 14px 0px rgba(15, 20, 39, 0.20);
+    --ep-name-top: white;
+    --topics-shadow: -10px 24px 35px 0px rgba(8, 8, 9, 0.25), -1px -3px 14px 0px rgba(15, 20, 39, 0.20);
+    --topics-address-cl2: white;
+    --category-list1-shadow: -10px 24px 35px 0px rgba(8, 8, 9, 0.25), -1px -3px 14px 0px rgba(15, 20, 39, 0.20);
+    --category-buttom: #373A43;
+    --category-buttom-bd: #373A43;
+    --buttom-hover-bg: white;
+    --subscriptions-bg: #242731;
+    --subscriptions-shadow: -10px 24px 35px 0px rgba(8, 8, 9, 0.25), -1px -3px 14px 0px rgba(15, 20, 39, 0.20);
+    --episodes-border: #373A43;
+    --episodes-bg: #242731;
+    --audience-shadow: -10px 24px 35px 0px rgba(8, 8, 9, 0.25), -1px -3px 14px 0px rgba(15, 20, 39, 0.20);
+    --audience-dropdown-bg: #373A43;
+    --audience-year-color: #A6A7B2;
+    --column-color: #333056;
+    --audience-body-boder: #373A43;
+    --audience-footer-color: #373A43;
+    --footer1-img: #232333;
+    --footer2-img: #5F372E;
+    --Trending-Episodes-shadow: -10px 24px 35px 0px rgba(8, 8, 9, 0.25), -1px -3px 14px 0px rgba(15, 20, 39, 0.20);
+    --dashboard-profile: -10px 24px 35px 0px rgba(8, 8, 9, 0.25), -1px -3px 14px 0px rgba(15, 20, 39, 0.20);
+    --profile-right: #373A43;
+    --profile-introduction: #F0F3F6;
+    --profile-buttom: #373A43;
+    --profile-buttom-hover: #5f6167;
+    --TrendingEpisodes-border: #373A43;
+    --statistics-bg: #242731;
+    --statistics-shadow: -10px 24px 35px 0px rgba(8, 8, 9, 0.25), -1px -3px 14px 0px rgba(15, 20, 39, 0.20);
+    --statistics-border-bottom: #373A43;
+    --statistics-rectangle1: rgba(255, 235, 199, 0.20);
+    --subscribers-bg: #242731;
+    --subscribers-shadow: -10px 24px 35px 0px rgba(8, 8, 9, 0.25), -1px -3px 14px 0px rgba(15, 20, 39, 0.20);
+    --subscribers-buttom-bg: #373A43;
+    --episodes-upload: #2B2A45;
+    --episodes-table-border: #373A43;
+    --episodes-table-img: #373A43;
+    --upload-boder: #373A43;
+    --upload-shadow: -10px 24px 35px 0px rgba(8, 8, 9, 0.25), -1px -3px 14px 0px rgba(15, 20, 39, 0.20);
+    --upload-png-bg: #373A43;
+    --upload-png-shadow: 0px -1px 1px 0px rgba(0, 0, 0, 0.25) inset;
+    --upload-png-boder: #242731;
+    --upload-boder-bt:#373A43;
+    --details-inputs-bg:#373A43 ;
+    --details-description-header:#272B30;
+    --details-description-main: #373A43;
+    --keywords-bg:#373A43;
+    --keyword-shadow:0px -1px 1px 0px rgba(0, 0, 0, 0.25) inset;
+    --team-buttom-bg: #2B2A45;
+    --team-table-bt: #373A43;
+    --team-table-td2: white;
+    --table-td-lastchild:#5F372E;
+    --subscribers-table-boder:#373A43;
+    --subcribers-badge-bg:#493841;
+    --leaderboard-buttom-bg:#373A43;
+    --leaderboard-boder:#373A43;
+  }
+  .trending-banner {
+    box-shadow: 0px 24px 44px 0px rgba(0, 0, 0, 0.2);
+  }
+}
+.leaderboard {
+  overflow-x: auto;
+}
+.leaderboard-header {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.leaderboard-heading {
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.09;
+}
+.leaderboard-buttom-list {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 36px;
+}
+.leaderboard-buttom-item {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  color: black;
+  cursor: pointer;
+  padding: 6px 20px;
+  border-radius: 6px;
+  background: var(--leaderboard-buttom-bg, #F0F3F6);
+}
+.leaderboard-buttom-item:hover {
+  color: white;
+  background: #6C5DD3;
+}
+.leaderboard-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.leaderboard-name1 {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.leaderboard-name2 {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.42;
+  color: #5F6164;
+}
+.leaderboard-icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.46;
+}
+.leaderboard-buttom {
+  cursor: pointer;
+  padding: 3px 16px;
+  background: #FF754C;
+  border-radius: 4px;
+  display: inline-block;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.42;
+  color: white;
+}
+.leaderboard table {
+  width: 100%;
+}
+.leaderboard table td {
+  white-space: nowrap;
+  padding: 16px 0px;
+  text-align: left;
+  border-bottom: 1px solid var(--leaderboard-buttom-bg, #E4E4E4);
+}
+@container mainContainer (max-width:900px) {
+  .leaderboard table td {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+}
+
+/*# sourceMappingURL=leaderboard.css.map */

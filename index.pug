@@ -1,0 +1,16 @@
+extends ./views/layout/_dashboard
+append stylesheet
+ link(rel="stylesheet", href="./style/home.css")
+block main
+ .home-wrapper
+  .home-left
+   include ./views/module/Home/_popular-host.pug
+   include ./views/module/Home/_trending.pug
+   include ./views/module/Home/_feed.pug
+  .home-right 
+   include ./views/module/Home/_top-podcast.pug
+   include ./views/module/Home/_sugget-follow.pug
+   include ./views/module/Home/_listening-history.pug
+   include ./views/module/Home/_topics.pug
+   include ./views/module/Home/_play.pug
+  

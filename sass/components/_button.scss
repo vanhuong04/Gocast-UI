@@ -1,0 +1,21 @@
+@use '../utils' as ut;
+
+.button {
+    --gap: 10px;
+    --fw: 600;
+    --pd: 8px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap);
+    font-weight: var(--fw);
+    border-radius: 8px;
+    font-size: 15px;
+    padding: var(--pd);
+    &-primary{
+        color: ut.$gray-natural1;
+        background-color: ut.$primary-color;
+    }
+
+}
+

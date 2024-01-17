@@ -1,0 +1,126 @@
+extends ./views/layout/_dashboard
+append stylesheet
+ link(rel="stylesheet", href="./style/leaderboard.css")
+block main
+ .leaderboard
+  .leaderboard-header 
+   .leaderboard-heading Leaderboard
+   .leaderboard-buttom-list 
+    .leaderboard-buttom-item 
+     p Reviews
+    .leaderboard-buttom-item 
+     p Ratings
+    .leaderboard-buttom-item 
+     p Followers
+  .leaderboard-body 
+   table 
+    tbody 
+     tr
+      td
+       img(src="./images/Medal.png", alt="")
+      td
+       .leaderboard-info 
+        img(src="./images/UIHUT.png", alt="")
+        .leaderboard-name 
+         .leaderboard-name1 Thomas L. Fletcher
+         .leaderboard-name2 Product Designer
+      td 
+       .leaderboard-icon
+        img(src="./images/message-text.png", alt="")
+        p 2.4k
+      td 
+       .leaderboard-icon
+        img(src="./images/star.png", alt="")
+        p 6.4k
+      td
+       .leaderboard-icon  
+        img(src="./images/eye1.png", alt="")
+        p 456
+      td 
+       .leaderboard-buttom  
+        p Follow
+      td 
+       a.leaderboard-link(href="#") 
+        img(src="./images/filled.png", alt="")
+     tr
+      td
+       img(src="./images/Medal1.png", alt="")
+      td
+       .leaderboard-info 
+        img(src="./images/UIHUT.png", alt="")
+        .leaderboard-name 
+         .leaderboard-name1 Thomas L. Fletcher
+         .leaderboard-name2 Product Designer
+      td
+       .leaderboard-icon  
+        img(src="./images/message-text.png", alt="")
+        p 2.4k
+      td
+       .leaderboard-icon  
+        img(src="./images/star.png", alt="")
+        p 6.4k
+      td
+       .leaderboard-icon   
+        img(src="./images/eye1.png", alt="")
+        p 456
+      td 
+       .leaderboard-buttom  
+        p Follow
+      td 
+       a.leaderboard-link(href="#") 
+        img(src="./images/filled.png", alt="")
+     tr
+      td
+       img(src="./images/Medal3.png", alt="")
+      td
+       .leaderboard-info 
+        img(src="./images/UIHUT.png", alt="")
+        .leaderboard-name 
+         .leaderboard-name1 Thomas L. Fletcher
+         .leaderboard-name2 Product Designer
+      td
+       .leaderboard-icon  
+        img(src="./images/message-text.png", alt="")
+        p 2.4k
+      td
+       .leaderboard-icon 
+        img(src="./images/star.png", alt="")
+        p 6.4k
+      td
+       .leaderboard-icon   
+        img(src="./images/eye1.png", alt="")
+        p 456
+      td 
+       .leaderboard-buttom  
+        p Follow
+      td 
+       a.leaderboard-link(href="#") 
+        img(src="./images/filled.png", alt="")
+     each val in [1,2,3,4]
+       tr
+        td 4
+        td
+         .leaderboard-info 
+          img(src="./images/UIHUT.png", alt="")
+          .leaderboard-name 
+           .leaderboard-name1 Thomas L. Fletcher
+           .leaderboard-name2 Product Designer
+        td
+         .leaderboard-icon 
+          img(src="./images/message-text.png", alt="")
+          p 2.4k
+        td
+         .leaderboard-icon  
+          img(src="./images/star.png", alt="")
+          p 6.4k
+        td
+         .leaderboard-icon   
+          img(src="./images/eye1.png", alt="")
+          p 456
+        td 
+         .leaderboard-buttom  
+          p Follow
+        td 
+         a.leaderboard-link(href="#") 
+         img(src="./images/filled.png", alt="")
+     

@@ -1,0 +1,45 @@
+@use '../../utils/index' as ut;
+
+.follow{
+
+    &-list{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+
+   &-user{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    &-avt{
+        flex: 0 0 46px;
+        aspect-ratio: 1;
+        border-radius: 10px;
+        box-shadow: 0 0 0 2px var(--bg-body-color), 0 0 0 3px pink;
+        
+        img{
+            object-fit: cover;
+            border-radius: inherit;
+        }
+    }
+
+    &-name{
+        font-size: 15px;
+        font-weight: 500;
+        margin-bottom: 4px;
+    }
+
+    &-username{
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 1.46;
+        color: ut.$gray2;
+    }
+   }
+}

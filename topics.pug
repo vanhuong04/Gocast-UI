@@ -1,0 +1,9 @@
+extends ./views/layout/_dashboard
+append stylesheet
+ link(rel="stylesheet", href="./style/topics.css")
+block main
+ .topics 
+  .topics-header 
+   .topics-heading Explore Topics
+   .topics-heading-clone Most Popular Podcast Topics
+  include ./views/module/topics/_topics-main.pug

@@ -1,0 +1,144 @@
+@use '../../theme/dark';
+@use '../../utils/index' as ut;
+
+.episodes {
+    &-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+
+    &-left {
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 1.09;
+    }
+
+    &-right {
+        display: flex;
+        gap: 6px;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 16px;
+        background: var(--episodes-upload, #F0EFFB);
+        border-radius: 8px;
+        text-decoration: none;
+        color: #6C5DD3;
+    }
+
+    &-main {
+        overflow-x: auto;
+    }
+
+
+    @container mainContainer (max-width:900px) {
+        table {
+            white-space: nowrap;
+
+        }
+
+       &-main th,
+       &-main td{
+        padding-left: 15px;
+        padding-right: 15px;
+       }
+
+        &-table-name {
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            word-break: break-word;
+        }
+    }
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead th {
+    text-align: left;
+}
+
+tbody td {
+   
+    padding-top: 30px;
+    padding-bottom: 27px;
+    border-bottom: 1px solid var(--episodes-table-border, #E4E4E4);
+    font-family: IBM Plex Sans;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.46;
+}
+
+tbody tr {}
+
+.episodes-table {
+    &-name {
+        max-width: 270px;
+        word-break: break-all;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 1.5;
+        margin-bottom: 8px;
+    }
+
+    &-category {
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 1.46;
+        color: ut.$gray2;
+    }
+
+    &-status {
+        padding: 6px 10px;
+        color: #7B6DD7;
+        background-color: var(--episodes-upload, #F0EFFB);
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.46;
+        margin-right: 20px;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &-img {
+        display: flex;
+        gap: 8px;
+
+    }
+
+
+    &-img1 {
+        background-color: var(--episodes-table-img, #F8F8F8);
+        padding: 8px;
+        border-radius: 6px;
+
+        img {
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+    &-img2 {
+        background-color: var(--episodes-table-img, #F8F8F8);
+        padding: 8px;
+        border-radius: 6px;
+
+        img {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}

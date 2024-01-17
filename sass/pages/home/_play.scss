@@ -1,0 +1,87 @@
+@use '../../utils/index' as ut;
+
+.play {
+   
+
+    margin-bottom: 72px;
+    &-heading {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 20px;
+        line-height: 1.5;
+    }
+
+    &-main {
+        overflow: hidden;
+        position: relative;
+        background-color: rgba(0, 0, 0, 0.916);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 9px 0px 20px 0px;
+        
+    }
+
+    &-avt {
+        border-radius: 100rem;
+        margin-top: 9px;
+        width: 115px;
+        height: 114px;
+    }
+
+    &-name {
+        font-size: 15px;
+        font-weight: 500;
+        color: white;
+        line-height: 1.46;
+        margin-top: 2px;
+        margin-bottom: 6px;
+    }
+
+    &-info {
+        display: flex;
+        gap: 6px;
+        color: ut.$gray2;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 1.5;
+        margin-bottom: 10px;
+    }
+
+    &-suara {
+        display: flex;
+        color: white;
+        gap: 8px;
+        justify-content: center;
+        align-items: center;
+        font-size: 12px;
+        font-weight: 400;
+        margin-bottom: 10px;
+       
+    }
+
+    &-start {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &-volumn {
+        padding: 8px;
+        background-color: rgba(50, 42, 49, 0.50);
+        border-radius: 50px;
+        position: absolute;
+        bottom: 18px;
+        right: 10px;
+    }
+
+    &-sticker {
+        position: absolute;
+        top: -9px;
+        right: 0px;
+    }
+
+
+}

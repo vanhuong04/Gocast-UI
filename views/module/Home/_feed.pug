@@ -1,0 +1,14 @@
+
+.feed  
+ .feed-header 
+  .feed-tab 
+   each tab in ["My Feed", "Poplar Feed", "Recent"]
+    .feed-tab-item= tab
+  .feed-toogle
+   +toogle
+   p New Releases &amp; Guests Only
+ .feed-main
+  each val in [1,2,3]
+   +feedItem
+
+

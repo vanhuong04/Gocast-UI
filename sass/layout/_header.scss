@@ -1,0 +1,94 @@
+@use '../utils' as ut;
+
+.header {
+
+  
+    padding: 24px 60px 24px 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-logo {
+        flex-shrink: 0;
+        color: white;
+    }
+
+    &-right {
+       
+        display: flex;
+        gap: 24px;
+    }
+
+    &-action {
+        @include ut.flexBox(center, center, 24px)
+    }
+
+    &-profile {
+
+        @include ut.size(48px);
+
+        img {
+            border-radius: 100rem;
+            @include ut.Cover();
+        }
+    }
+
+    &-upload {
+        text-decoration: none;
+        border-radius: 8px;
+        background-color: ut.$primary-color;
+
+        justify-content: center;
+        padding: 12px 16px;
+        color: ut.$gray-natural1;
+
+        font-weight: 600;
+        @include ut.flexBox(center, center, 6px)
+    }
+
+    &-search {
+        display: flex;
+
+        flex: 0 0 360px;
+        padding: 12px 20px;
+        gap: 12px;
+        border-radius: 12px;
+
+        &-input {
+            border: none;
+            width: 100%;
+            color: ut.$primary-color;
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 22px;
+            background-color: transparent;
+            caret-color: ut.$primary-color;
+            flex: 1;
+
+
+        }
+
+    }
+
+
+}
+
+@media (min-width:900px) {
+    .header-logo {
+        display: none;
+    }
+}
+
+@media (max-width:900px) {
+    .header {
+        padding: 20px 24px;
+    }
+
+    .header-search,
+    .header-upload,
+    .header-action {
+        display: none;
+    }
+
+
+}

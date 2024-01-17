@@ -1,0 +1,51 @@
+extends ./views/layout/_dashboard
+append stylesheet
+ link(rel="stylesheet", href="./style/subscribers.css")
+block main
+ .subscribers
+  .subscribers-header Subscribers
+  .subscribers-body 
+   table 
+    thead 
+     tr 
+      th
+        label(for="check").subscribers-check 
+         input(type="checkbox" id="check")
+         .subscribers-check2
+          <svg xmlns="http://www.w3.org/2000/svg" width="10" height="9" viewBox="0 0 10 9" fill="none">
+          <path d="M3.5 5.375L2.20711 4.08211C1.81658 3.69158 1.18342 3.69158 0.792893 4.08211L0.707107 4.16789C0.316583 4.55842 0.316583 5.19158 0.707107 5.58211L2.79289 7.66789C3.18342 8.05842 3.81658 8.05842 4.20711 7.66789L9.29289 2.58211C9.68342 2.19158 9.68342 1.55842 9.29289 1.16789L9.20711 1.08211C8.81658 0.691583 8.18342 0.691583 7.79289 1.08211L3.5 5.375Z" fill="currentcolor"/>
+          </svg> 
+      th Name
+      th Bio
+      th Badge
+      th Karma
+      th Follow
+      th Link
+    tbody 
+     each val in [1,2,3,4,5,6]
+      tr 
+       td
+        .subscribers-check 
+         label(for="check2") 
+          input(type="checkbox" id="check2")
+          .subscribers-check2
+           <svg xmlns="http://www.w3.org/2000/svg" width="10" height="9" viewBox="0 0 10 9" fill="none">
+           <path d="M3.5 5.375L2.20711 4.08211C1.81658 3.69158 1.18342 3.69158 0.792893 4.08211L0.707107 4.16789C0.316583 4.55842 0.316583 5.19158 0.707107 5.58211L2.79289 7.66789C3.18342 8.05842 3.81658 8.05842 4.20711 7.66789L9.29289 2.58211C9.68342 2.19158 9.68342 1.55842 9.29289 1.16789L9.20711 1.08211C8.81658 0.691583 8.18342 0.691583 7.79289 1.08211L3.5 5.375Z" fill="currentcolor"/>
+           </svg> 
+       td 
+        .subscribers-info
+         .subscribers-img
+          img(src="./images/Imagetable.png", alt="")
+         .subscribers-name Thomas L. Fletcher
+       td I am a product designer
+       td 
+        .subscribers-badge
+         p Producer
+       td 43
+       td
+        .subscribers-buttom
+         p Follow
+       td 
+        a.subscribers-link(href="#") 
+         img(src="./images/table-link.png", alt="")
+         

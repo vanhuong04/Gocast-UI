@@ -1,0 +1,49 @@
+@use '../../utils/index' as ut;
+ 
+.listen{
+    display: flex;
+    &-list{
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+    }
+    &-img{
+        img{
+            border-radius: 5px;
+            margin-right: 7px;
+        }
+    }
+    &-info{
+        &-top{
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 1.46;
+            color: ut.$gray2;
+            margin-bottom: 3px;
+            margin-top: 3px;
+        }
+
+        &-heading{
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 1.46;
+            margin-bottom: 3px;
+        }
+
+        &-icon{
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        &-item{
+            display: flex;
+            gap: 6px;
+            color: ut.$gray2;
+            font-size: 13px;
+            font-weight: 400;
+            align-items: center;
+            
+        }
+    }
+}

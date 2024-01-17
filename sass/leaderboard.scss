@@ -1,0 +1,115 @@
+@use './utils/index' as ut;
+@use './theme/dark' ;
+
+.leaderboard {
+    overflow-x: auto;
+    &-header {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+  
+
+    &-heading {
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 1.09;
+    }
+
+    &-buttom-list {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        margin-bottom: 36px;
+    }
+
+    &-buttom-item {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 24px;
+        color: black;
+        cursor: pointer;
+        padding: 6px 20px;
+        border-radius: 6px;
+        background: var(--leaderboard-buttom-bg, #F0F3F6);
+
+        &:hover {
+            color: white;
+            background: #6C5DD3;
+        }
+
+
+    }
+
+    &-info {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &-name1 {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.5;
+    }
+
+    &-name2 {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.42;
+        color: ut.$gray1;
+    }
+
+    &-icon {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.46;
+    }
+
+    &-buttom {
+        cursor: pointer;
+        padding: 3px 16px;
+        background: #FF754C;
+        border-radius: 4px;
+        display: inline-block;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.42;
+        color: white;
+    }
+
+    table {
+        width: 100%;
+       
+
+    }
+
+
+
+    table td {
+        white-space: nowrap;
+        padding: 16px 0px;
+        text-align: left;
+        border-bottom: 1px solid var(--leaderboard-buttom-bg, #E4E4E4);
+
+    }
+   
+
+   @container mainContainer (max-width:900px){
+    table td{
+        padding-left: 35px;
+        padding-right: 35px;
+    
+    }
+   }
+}

@@ -1,0 +1,39 @@
+@use '../utils/index' as ut;
+
+.heading {
+    --mb: 0;
+    font-size: 16px;
+    font-weight: 600; 
+    line-height: 1.5;
+    margin-bottom: var(--mb);
+}
+
+.widget{
+    margin-bottom: 40px;
+    &-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    &-heading{
+        font-size: 16px;
+        font-weight: 600;
+        
+    }
+
+    &-view-all{
+        display: flex;
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 18px;
+        color: ut.$gray2;
+        text-decoration: none;
+        gap: 2px;
+
+        img{
+            @include ut.size(16px);
+        }
+    }
+}

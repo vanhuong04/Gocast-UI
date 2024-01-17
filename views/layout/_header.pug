@@ -1,0 +1,18 @@
+.header 
+ a.header-logo(href="/")
+  include ../icons/_logo.pug
+ .header-search 
+  img(src="./images/icon-search.svg", alt="search").header-search-icon
+  input.header-search-input(type="text" placeholder="Search 2+ million podcasts and listeners")
+ .header-right
+  button
+   a.header-upload(href= "./episodes-upload.html")
+    img(src="./images/icon-upload.svg", alt="upload")
+    span Upload
+  a(href="#").header-action
+   img(src="./images/icon-message.png", alt="message")
+   img(src="./images/Notification.svg", alt="Notification")
+  a(href="#").header-profile 
+   img(src="./images/profile.svg", alt="profile")
+
+   

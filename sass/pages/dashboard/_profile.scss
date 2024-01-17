@@ -1,0 +1,100 @@
+@use '../../utils/index' as ut;
+
+.profile {
+    box-shadow: var(--dashboard-profile, -10px 24px 35px 0px rgba(227, 230, 236, 0.25), -1px -3px 14px 0px rgba(227, 230, 236, 0.20));
+    padding: 20px;
+
+    &-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &-left {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+
+
+        }
+
+        &-right {
+            padding: 8px;
+            background: var(--profile-right, #F8F8F8);
+            border-radius: 100rem;
+        }
+    }
+
+    &-name {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 1.5;
+        margin-bottom: 4px;
+
+    }
+
+    &-profession {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.42;
+        color: ut.$gray2;
+    }
+
+    &-introduction {
+        margin-top: 23px;
+        margin-bottom: 23px;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.52;
+        color: var(--profile-introduction, ut.$gray3);
+    }
+
+    &-date {
+        display: flex;
+        gap: 10px;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.46;
+        margin-bottom: 23px;
+
+        span {
+            color: ut.$gray2;
+        }
+    }
+
+
+    &-footer {
+        cursor: pointer;
+
+
+    }
+
+    &-buttom {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        background: var(--profile-buttom, #F8F8F8);
+        padding: 11px 16px;
+        border-radius: 8px;
+
+        p {
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 1.38;
+        }
+
+        &:hover {
+            background-color: var(--profile-buttom-hover, #bfbebe);
+            color: white;
+            font-style: 16px;
+            font-weight: 900;
+        }
+
+    }
+}

@@ -1,0 +1,26 @@
+@use '../utils' as ut;
+.wrapper{
+    max-width: 1440px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 256px minmax(0, 1fr);
+    min-height: 100vh;
+    margin-bottom: 50px;
+}
+
+.main-container{
+    padding: 37px 30px;
+    container-type: inline-size;
+    container-name: mainContainer;
+    
+}
+
+@include ut.screenMaxWidth(900px){
+    .wrapper{
+        grid-template-columns: 1fr;
+    }
+    .main-container{
+        padding: 24px;
+        
+    }
+}

@@ -1,0 +1,6 @@
+extends ./views/layout/_dashboard
+append stylesheet
+ link(rel="stylesheet", href="./style/subscriptions.css")
+block main
+ include ./views/module/subscriptions/_Subscriptions.pug
+ include ./views/module/subscriptions/_Latest-Episodes.pug

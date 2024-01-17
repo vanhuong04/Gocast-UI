@@ -1,0 +1,96 @@
+@use '../../utils/index' as ut;
+
+.subscriptions {
+    &-title {
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 1.09;
+        margin-bottom: 12px;
+        @container mainContainer (max-width: 900px){
+            margin-bottom: 8px;
+        }
+    }
+
+    &-sub-title {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.42;
+        color: ut.$gray2;
+        margin-bottom: 20px;
+        @container mainContainer (max-width: 900px){
+            margin-bottom: 14px;
+        }
+    }
+
+
+    &-list {
+        display: flex;
+        gap: 37px;
+        justify-content: space-between;
+        margin-bottom: 50px;
+
+        :first-child img {
+            background-color: #FFEBC7;
+        }
+
+        :nth-child(2) img {
+            background-color: #FFBAA5;
+        }
+
+        :nth-child(3) img {
+            background-color: #FFC7D9;
+        }
+
+        :nth-child(4) img {
+            background-color: #C4BEED;
+        }
+
+        :nth-child(5) img {
+            background-color: #FFEBC7;
+        }
+       
+
+        @container mainContainer (max-width: 900px){
+            display: grid;
+            grid-auto-flow: column;
+            grid-auto-columns:  184px;
+            overflow-x: auto;
+            margin-bottom: 27px
+        }
+    }
+
+
+    &-item {
+        background-color: var(--subscriptions-bg, white);
+        box-shadow: var(--subscriptions-shadow, -10px 24px 35px 0px rgba(227, 230, 236, 0.25), -1px -3px 14px 0px rgba(227, 230, 236, 0.20));
+        padding: 14px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 9px;
+
+
+    }
+
+    &-img {
+        border-radius: 100rem;
+
+    }
+
+    &-name {
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.09;
+    }
+
+    &-jod {
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.46;
+        color: ut.$gray2;
+    }
+}

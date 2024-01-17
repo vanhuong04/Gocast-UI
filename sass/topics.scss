@@ -1,0 +1,31 @@
+@use './pages/topics/index';
+@use './theme/dark';
+@use './utils/index' as ut;
+@use './layout';
+
+
+.topics {
+    &-heading {
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 1.08;
+        margin-bottom: 14px;
+
+        &-clone {
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 1.42;
+            color: ut.$gray2;
+            margin-bottom: 38px;
+            
+        @container mainContainer (max-width: 900px) {
+           margin-bottom: 20px;
+
+        }
+        }
+    }
+
+
+}

@@ -1,0 +1,36 @@
+@use '../utils/index' as ut;
+
+.toogle {
+    
+    &-main {
+        @include ut.size(30px, 17px);
+        border-radius: 100rem;
+        background: ut.$gray2;
+        padding: 1.5px 2px;
+        cursor: pointer;
+    }
+
+
+    input {
+        display: none;
+
+        &:checked + .toogle-main .toogle-spinner {
+            transform: translateX(80%);
+
+
+        }
+
+        &:checked + .toogle-main {
+            background-image: ut.$gradient;
+
+        }
+
+    }
+
+    &-spinner {
+        border-radius: 100rem;
+        background: white;
+        @include ut.size(14px);
+        transition: all 0.3s;
+    }
+}

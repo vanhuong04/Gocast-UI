@@ -1,0 +1,168 @@
+@use '../../utils/index' as ut;
+
+.TrendingEpisodes {
+    margin-top: 40px;
+    box-shadow: var(--Trending-Episodes-shadow, -10px 24px 35px 0px rgba(227, 230, 236, 0.25), -1px -3px 14px 0px rgba(227, 230, 236, 0.20));
+    padding: 30px;
+
+    &-data {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &-left {
+            p {
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 1.44;
+                margin-bottom: 4px;
+            }
+
+            span {
+                font-size: 13px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 1.46;
+                color: ut.$gray2;
+            }
+        }
+
+        @container mainContainer (max-width:760px) {
+            flex-direction: column;
+            gap: 27px;
+        }
+    }
+
+    &-body {
+        margin-top: 70px;
+        overflow-x: auto;
+
+    }
+
+}
+
+table {
+    overflow-y: auto;
+    width: 100%;
+    border-collapse: collapse;
+
+}
+
+table th {
+    vertical-align: middle;
+    padding-bottom: 30px;
+
+
+}
+
+table th:first-child,
+td:first-child {
+    text-align: left;
+}
+
+table th:last-child,
+td:last-child {
+    text-align: right;
+}
+
+table td:nth-child(2) {
+    text-align: center;
+}
+
+table td {
+    padding-top: 31px;
+    padding-bottom: 10px;
+
+    span {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.42;
+
+    }
+}
+
+table th {
+    border-bottom: 1px solid var(--TrendingEpisodes-border,#F0F3F6);
+
+}
+
+table thead tr {
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.46;
+    color: ut.$gray2;
+}
+
+table tbody {
+
+    gap: 16px;
+}
+
+table tr {
+    border-bottom: 1px solid var(--TrendingEpisodes-border,#F0F3F6);
+
+    @container mainContainer (max-width:760px) {
+        display: flex;
+        gap: 200px;
+    }
+
+}
+
+.table {
+    &-list {
+        display: flex;
+        gap: 10px;
+
+    }
+
+    &-img {
+        border-radius: 10px;
+        width: 48px;
+        height: 48px;
+    }
+
+    &-title {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+    }
+
+    &-heading {
+        white-space: nowrap;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 1.42;
+    }
+
+    &-time {
+        white-space: nowrap;
+
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        img {
+            width: 4px;
+            height: 4px;
+
+        }
+
+        p {
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 1.5;
+            color: ut.$gray2;
+        }
+    }
+}
+
+tbody tr {
+    @container mainContainer (max-width:760px) {}
+
+}

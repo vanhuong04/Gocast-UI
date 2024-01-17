@@ -1,0 +1,46 @@
+@use './pages/dashboard/_index.scss';
+@use './utils/index' as ut;
+@use './theme/dark';
+@use './layout';
+
+
+.dashboard {
+    &-wrapper{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 50px;
+
+        @container mainContainer (max-width: 900px) {
+        grid-template-columns: 1fr;
+        display: inline-block;
+            
+        }
+    }
+
+    &-title {
+        margin-bottom: 30px;
+    }
+
+    &-title-1 {
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 1.09;
+        margin-bottom: 10px;
+    }
+
+    &-title-2 {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.42;
+        color: ut.$gray2;
+    }
+
+   @container mainContainer (max-width:760px){
+    &-left{
+        max-width: 365px;
+    }
+   }
+
+}

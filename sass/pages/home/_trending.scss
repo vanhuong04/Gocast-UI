@@ -1,0 +1,124 @@
+@use '../../utils/index' as ut;
+
+.heading {
+    --mb: 11px;
+}
+
+.trending {
+    padding-top: 28px;
+    container-type: inline-size;
+    container-name: trending;
+
+    &-banner {
+        border-radius: 10px;
+        padding: 20px;
+        background: (var(--banner-color, #F8F8F8));
+        display: flex;
+        align-items: flex-start;
+        position: relative;
+
+
+    }
+
+    &-content {
+        flex: 0 0 310px;
+    }
+
+    &-title {
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 32px;
+        margin-bottom: 11px;
+
+        span {
+            color: transparent;
+            background-clip: text;
+            background-image: ut.$gradient;
+        }
+    }
+
+    &-podcast {
+        color: ut.$gray-natural;
+        margin-bottom: 4px;
+    }
+
+    &-author {
+        color: (var(--body-text, #232333));
+        font-size: 14px;
+        margin-bottom: 20px;
+
+        span {
+            color: ut.$gray-natural;
+        }
+    }
+
+    &-image {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        right: 15px;
+        max-width: 332px;
+
+
+
+    }
+
+    &-circle,
+    &-vector {
+        position: absolute;
+    }
+
+
+    &-vector {
+        top: 20%;
+        right: 10%;
+    }
+
+    &-circle {
+        right: 35%;
+        bottom: 0;
+    }
+
+    @include ut.screenMaxWidth(767px) {
+        padding-top: 35px;
+        padding-bottom: 25px;
+        &-circle {
+            right: 15px;
+        }
+    }
+
+    @container trending (max-width:630px) {
+        &-image {
+            display: none;
+        }
+
+        &-content {
+            flex: 1;
+        }
+    }
+
+    &-dot-list{
+        
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 18px;
+        list-style-type: none;
+        :nth-child(3){
+            color: white;
+        }
+    }
+
+
+    &-dot{
+        width: 6px;
+        height: 6px;
+        background-color: ut.$gray2;
+        border-radius: 100rem;
+        &:nth-child(3){
+            background-color: white;
+            box-shadow: 0 0 0 2px ut.$secondary;
+        }
+    }
+}

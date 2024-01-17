@@ -1,0 +1,299 @@
+mixin menuItem(text, icon = '', href= "#")
+ li.menu-item 
+    a.menu-link(href= href)
+     span.menu-icon
+      if icon
+       | !{icon}
+     span.menu-text= text
+
+
+
+mixin buttonPlay(icon= "", title= "")
+ button.button.button-primary 
+  img(src= icon, alt="")
+  span= title 
+
+mixin feedItem()
+ .feed-item 
+  .feed-item-header
+   .feed-author
+    .feed-author-avt
+     img(src="../../images/UIHUT.png", alt="")
+     span.feed-author-verify
+      include ../icons/_icon-verify
+    .feed-author-content
+     .feed-author-header 
+      h4.feed-author-name James Killened 
+      .feed-author-rating
+       span rated an episude
+       img(src="./images/star-rating.png", alt="")
+     .feed-date Jun 25th
+   span 
+    include ../icons/_icon-more 
+  .feed-item-main 
+   .feed-img
+    img(src="./images/mic.png", alt="")
+   .feed-item-content
+    .feed-item-podcast 
+     .feed-item-podcast-title Perspective Podcast (Ep. 1)
+     img(src="./images/share.png", alt="")
+    h2.feed-item-heading Philosophy vs Religion vs Science: Yahia Amin and Sadman Sadik
+    .feed-item-time   
+     .feed-item-time-item 
+      img(src="./images/Time.png", alt="")
+      span 11 dayes ago
+     .feed-item-time-item
+      img(src="./images/Timer.png", alt="")
+      span 45mins 10 Sec
+    .feed-item-desc Play Philosophy vs Religion vs Science: Perspective Podcast (Ep. 1) | Yahia Amin and Sadman Sadik by PERSPECTIVE with Yahia Amin on desktop and mobile. Play over 265 million tracks for...
+  .feed-item-footer 
+   .feed-actions 
+    button
+     img(src="./images/heart.png", alt="")
+    button
+     img(src="./images/magic-star.png", alt="")
+    button
+     img(src="./images/music-playlist.png", alt="")
+   +buttonPlay("./images/Plays.png","Play Episode")
+
+
+mixin widgetHeader(heading = "", url= "#")
+ .widget-header
+   h3.widget-heading= heading
+   a(href= url).widget-view-all 
+    | View All
+    img(src="./images/viewall.png", alt="")
+   
+
+mixin followItem()
+ .follow
+  .follow-user 
+   .follow-user-avt 
+    img(src="./images/image-avt.png", alt="")
+   .follow-user-info
+    h4.follow-user-name Yahia Amin
+    p.follow-user-username @yahiamdamin
+  .follow-action
+   +buttonPlay(flase, "Follow")
+
+
+mixin listItem(img="")
+ .listen 
+  .listen-img 
+   img(src= img, alt="")
+  .listen-info 
+   .listen-info-top Perspective with Yahia Amin
+   .listen-info-heading Don't Always Win | LifeSpring
+   .listen-info-icon  
+    .listen-info-item 
+     img(src="./images/Play2.png", alt="")
+     | 156
+    .listen-info-item 
+     img(src="./images/heart2.png", alt="")
+     | 78
+
+mixin topicItem(img="")
+ .topic
+  img.topic-img(src= img)
+  .topic-content
+   h4.topic-title 👫 Society &amp; Culture
+   .topic-podcast 761k podcast
+
+mixin playlistItem
+ .playlist-item
+  img.playlist-image(src="./images/playlist.png")
+  .playlsit-content
+   .playlist-top 
+    h3.playlist-title UIHUT Podcsat
+    span.playlist-date Created on 1 day ago
+   .playlist-desc UIHUT is a design and coding resources platform for designers, developers, and entrepreneurs.
+   .playlist-bottom
+    .playlist-episodes
+     each val in [1, 2, 3, 4, 5]
+      img.playlist-episode-images.playlist-episode-item(src="./images/footerplaylsit.png")
+     .playlist-episode-number.playlist-episode-item 35+
+    .playlist-likes  
+     img.playlist-likes-img(src="./images/heartlike.png")
+     span.playlist-likes-number 1.5k
+
+
+mixin tredingBanner(img="")
+ .trending-banner 
+  .trending-banner-content 
+   .trending-title Don't Always Win | LifeSpring
+   .trending-episode Podcast Episode - 1
+   .trending-info Yahia Md Amin (Chairman - LifeSpring Limited )
+   .trending-play
+    img(src="./images/trendingplay.png", alt="")
+    span Play Now
+  img.trending-banner-img(src= img)
+
+
+mixin episdesItems(img="")
+ .episdes-all
+  .episdes-right
+   .episdes-item-right
+    img(src= img, alt="")
+  .episdes-left 
+    .episdes-name-top 
+     .episdes-name SHOULD I MIGRATE?
+     img(src="./images/more.svg", alt="")
+    .episdes-services Perspective Podcast 
+    .episdes-review 
+     .episdes-review-right 
+      img(src="./images/ep1.png", alt="")
+      span 1.2k Played 
+     .episdes-review-left 
+      img(src="./images/ep2.png", alt="")
+      span 1 week ago
+    .episdes-infos  
+     .episdes-avt
+      img(src="./images/epavt.png", alt="")   
+     .episdes-ifo 
+      .episdes-ifo-name Fletcher Thomas
+      .episdes-ifo-id @fletcherthomasl
+    .episdes-listen
+     .episdes-listen-left 
+      img.img1(src="./images/epplay.png", alt="")
+      img.img2(src="./images/eplisten.png", alt="")
+      .episdes-listen-time 5:59
+     .episdes-listen-right 
+      img.img-listen-share(src="./images/share.png", alt="")
+      img.img-listen-heart(src="./images/heartep.png", alt="")
+
+
+mixin toogle
+ label.toogle
+  input(type="checkbox")
+  .toogle-main
+   .toogle-spinner
+   
+  
+mixin topicsBody(img="")
+ a.topics-main(href='./topics_category.html')
+  img.topics-body-img(src= img, alt="")
+  .topics-mark
+   .topics-category 👫 Society &amp; Culture
+   .topics-seen 761k podcast
+
+
+mixin topicsCategoty(img="", ims="", sound="")
+ .category-item 
+  img.category-img(src= img)
+  .category-item-right 
+   .category-right-header 
+    img(src= ims, alt="")
+    .category-right-heading 
+     .category-heading1 Healthy Spirituality: What &amp; why?  | Yahia Amin
+     .category-heading2 
+      .category-heading-21 Perspective Podcast ( Episodes-1)
+      img.category-heading-22(src="./images/heading2.2.png")
+      .category-heading-23 1 Week Ago
+   .category-play 
+    .category-play-time1 3:24
+    img.category-sound(src= sound)
+    .category-play-time2 3:28
+   img.category-play-clone(src="./images/playclone.png")
+   .category-footer 
+    .category-footer-left 
+     img(src="./images/ctgr1.png", alt="")
+     img(src="./images/ctgr2.png", alt="")
+     img(src="./images/ctgr3.png", alt="")
+    .category-footer-right  
+     img(src="./images/ctgr4.png", alt="")
+     .category-footer-like 1.5k
+      
+
+mixin topicsCategory2(img="") 
+ .category-item2
+  img.category-img29(src= img)
+  .category-content 
+   .category-content-1 Christian Sister Accept Islam | Dr. Zakir Naik
+   .category-content-2 
+    .category-content-22  4 days ago 
+    img.category-content-23(src="./images/pc6.png")
+    .category-content-24 15 minute
+
+
+
+mixin subscriptionsItem(img="")
+ .subscriptions-item 
+  img.subscriptions-img(src= img )
+  .subscriptions-name Ralph Edwards
+  .subscriptions-jod Psychologist (UK)
+
+mixin episodesItem(img="")
+ .episodes-item 
+  .episodes-header 
+   img.episodes-img(src= img)
+   .episodes-content 
+    .episodes-ep Perspective Podcast (Ep. 1)
+    .episodes-philosophy-1 Philosophy vs Religion vs Science: Yahia Amin and Sadman Sadik
+    .episodes-time 
+     .episodes-time-1 
+      img(src="./images/time1.png", alt="")
+      span episodes
+     .episodes-time-2 
+      img(src="./images/time2.png", alt="")
+      span 45mins 10 Sec
+    .episodes-philosophy-2 Play Philosophy vs Religion vs Science: Perspective Podcast (Ep. 1) | Yahia Amin and Sadman Sadik by PERSPECTIVE with Yahia Amin...
+  .episodes-footer 
+   .episodes-icon 
+    img(src="./images/ft1.png", alt="")
+    img(src="./images/ft2.png", alt="")
+    img(src="./images/ft3.png", alt="")
+   .episodes-buttom
+    .episodes-buttom-2
+     img(src="./images/ft4.png", alt="")
+     span Play Episode
+
+mixin dropDownright 
+ .audience-data-right
+    .audience-dropdown
+     .audience-dropdown-list
+      p Last 1 Years
+      img(src="./images/tredingdropdown.png", alt="")
+     ul.audience-dropdown-item
+      li Last 3 days 
+      li Last 1 month
+      li Last 3 month
+
+
+mixin subscribersItem(img ="", follow )
+ .subscribers-item
+  .subscribers-left 
+   .subscribers-img 
+    img(src= img, alt="")
+   .subscribers-info 
+    .subscribers-name Cody Fisher
+    .subscribers-id @codyfisher
+  .subscribers-right
+   .subscribers-buttom= follow
+  
+mixin episodestitleInput(title, title2="",placehoder)
+ .details-inputs
+  .details-input-title= title
+  .details-input-title2= title2
+  input.details-input(type="text" placeholder= placehoder)
+  
+ 
+
+mixin toogle2(text="")
+ label.details-explicit-toogles 
+  input.input2(type="checkbox")
+  .details-explicit-toogle-main
+   .details-explicit-ellipse
+ .details-explicit-content= text
+
+mixin releaseCheckbox(text, content)
+ .release-list 
+  .release-checkbox-header
+   label.release-label(for="checkbox1") 
+    input.release-checkbox-input(type="checkbox" id="checkbox1")
+    .release-check
+     <svg width="10" height="9" viewBox="0 0 10 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+     <path d="M3.5 5.375L2.20711 4.08211C1.81658 3.69158 1.18342 3.69158 0.792893 4.08211L0.707107 4.16789C0.316583 4.55842 0.316583 5.19158 0.707107 5.58211L2.79289 7.66789C3.18342 8.05842 3.81658 8.05842 4.20711 7.66789L9.29289 2.58211C9.68342 2.19158 9.68342 1.55842 9.29289 1.16789L9.20711 1.08211C8.81658 0.691583 8.18342 0.691583 7.79289 1.08211L3.5 5.375Z" fill="currentcolor"/>
+     </svg>
+   p= text
+  .release-checkbox-content= content
+  

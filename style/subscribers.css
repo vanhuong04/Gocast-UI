@@ -1,0 +1,99 @@
+:root {
+  --primary-color: #6C5DD3;
+}
+
+.subscribers-header {
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.09;
+  margin-bottom: 40px;
+}
+.subscribers-body {
+  overflow-x: auto;
+}
+@container mainContainer (max-width: 900px) {
+  .subscribers-body thead th,
+  .subscribers-body tbody td {
+    padding-left: 40px;
+    padding-right: 40px;
+    white-space: nowrap;
+  }
+}
+.subscribers-check2 {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: transparent;
+  border-radius: 4px;
+  border: 1px solid #A6A7B2;
+  display: flex;
+  align-items: center;
+}
+.subscribers-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.subscribers-img {
+  background-color: #FFC7D9;
+  border-radius: 100rem;
+  overflow: hidden;
+}
+.subscribers-name {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.subscribers-badge {
+  border-radius: 4px;
+  color: #FFA2C0;
+  display: inline-block;
+  padding: 3px 16px;
+  background: var(--subcribers-badge-bg, #FFF6F9);
+}
+.subscribers-buttom {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.42;
+  color: white;
+  border-radius: 4px;
+  padding: 3px 16px;
+  display: inline-block;
+  background-color: #FF754C;
+}
+.subscribers table td:nth-child(3) {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  color: #A6A7B2;
+}
+.subscribers table {
+  width: 100%;
+}
+.subscribers thead th {
+  text-align: left;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid var(--subscribers-table-boder, #E4E4E4);
+}
+.subscribers tbody td {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid var(--subscribers-table-boder, #E4E4E4);
+}
+.subscribers-check input {
+  display: none;
+}
+.subscribers-check input:checked + .subscribers-check2 {
+  color: white;
+  background: #6C5DD3;
+}
+
+/*# sourceMappingURL=subscribers.css.map */

@@ -1,0 +1,164 @@
+@use '../../utils/index' as ut;
+
+.episodes {
+    &-title {
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 1.09;
+        padding-bottom: 22px;
+
+    }
+
+    &-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding-bottom: 80px;
+        gap: 32px;
+
+
+        @container mainContainer (max-width: 900px){
+        grid-template-columns: 1fr ;
+            
+        }
+    }
+
+    &-item {
+        background-color: var(--episodes-bg, #F0F3F6);
+
+    }
+
+    &-header {
+        border: 1px solid var(--episodes-border, #d4d6db);
+        padding: 16px;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        display: flex;
+        gap: 16px;
+        @container mainContainer (max-width: 900px){
+            display: grid;
+            grid-template-columns: 1fr ;
+                
+            }
+    }
+
+    &-img {
+        border-radius: 10px;
+        width: 240.527px;
+        height: 160.621px;
+        @container mainContainer (max-width: 900px){
+            width: 100%;
+            object-fit: cover;
+                
+            }
+    }
+
+    &-ep {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.42;
+        margin-bottom: 6px;
+        color: ut.$gray2;
+    }
+
+    &-philosophy-1 {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.42;
+        margin-bottom: 9px;
+    }
+
+    &-time {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+
+    &-time-1 {
+        display: flex;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.42;
+        gap: 4px;
+        align-items: center;
+        justify-content: center;
+        color: ut.$gray2;
+
+        img {
+            width: 14px;
+            height: 14px;
+        }
+    }
+
+    &-time-2 {
+        display: flex;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.42;
+        gap: 4px;
+        align-items: center;
+        justify-content: center;
+        color: ut.$gray2;
+
+
+        img {
+            width: 14px;
+            height: 14px;
+        }
+    }
+
+    &-philosophy-1 {
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 1.46;
+    }
+
+    &-footer {
+        border: 1px solid var(--episodes-border, #d4d6db);
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &-icon {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+    }
+
+    &-buttom-2 {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        padding: 8px 14px;
+        background-color: ut.$primary-color;
+        border-radius: 8px;
+
+        span {
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 1.42;
+            color: white;
+        }
+
+
+    }
+
+    &-buttom {
+        :hover {
+            background: #250eb7;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+    }
+}

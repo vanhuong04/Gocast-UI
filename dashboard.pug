@@ -1,0 +1,15 @@
+extends ./views/layout/_dashboard
+append stylesheet
+ link(rel="stylesheet", href="./style/bashboards.css")
+block main
+ .dashboard-title 
+  .dashboard-title-1 Hi, Thomas
+  .dashboard-title-2 Here’s what’s happening with your podcast today
+ .dashboard-wrapper 
+  .dashboard-left
+   include ./views/module/dashboard/_audience.pug
+   include ./views/module/dashboard/_trending-episodes.pug
+  .dashboard-right
+   include ./views/module/dashboard/_profile.pug
+   include ./views/module/dashboard/_activity-statistics.pug
+   include ./views/module/dashboard/_new-subscribers.pug

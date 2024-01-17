@@ -1,0 +1,85 @@
+extends ./views/layout/_dashboard
+append stylesheet
+ link(rel="stylesheet", href="./style/episodes-upload.css")
+block main
+ .upload
+  .upload-header Create New Episode 
+  .upload-body
+   .upload-main
+    .upload-file
+     .upload-heading Episode Thumbnail
+     .upload-sub-heading Pick a 1400/1400 (minimum) jpeg or png image, this cover art is used for the episode specific, if you don’t pick any the default one from the podcast will be used
+     .upload-png
+      input#file(type="file" accept="images/*") 
+      label.upload-label(for="file") 
+       img(src="./images/cloud-upload2.png", alt="")
+      .upload-png-title Drag and drop or browse to choose a file
+      .upload-png-type PNG, JPG and Gif files are allowed
+     .upload-audio-title Audio
+     .upload-sub-audio Upload your audio, you don’t have to worry about leveling that is automatically done by us (-16 Lufus)
+     .upload-audio 
+      img(src="./images/cloud-upload2.png", alt="")
+      .upload-here
+       input#file2(type="file" accept="images/*")
+       label(for="file2").upload-clickhere Click here
+       p to Upload
+      .upload-audio-type Audio file up to 500mb in mp3 or wav formate   
+    .upload-details 
+     .details-header 
+      .details-title Episode Details
+      .details-sub-title These details will show up on the player and include basic details and info about the episode
+      .details-input-text
+       +episodestitleInput("Episode title","","Title of your episode")
+       +episodestitleInput("Subtitle","Used for Twitter and Facebook descriptions, SEO, and appears on your podcast page. Keep it to a few sentences in length.","Slightly longer title")
+       +episodestitleInput("Subtitle","Short summary of the episode","Non HTML summary")
+      .details-description
+      .details-description-title Description
+      .details-description-body
+       .details-description-header
+        img(src="./images/Description1.png", alt="")
+        img(src="./images/Description2.png", alt="")
+        img(src="./images/Description3.png", alt="")
+        img(src="./images/Description4.png", alt="")
+        img(src="./images/Description5.png", alt="")
+        img(src="./images/Description6.png", alt="")
+        img(src="./images/Description7.png", alt="")
+        img(src="./images/Description8.png", alt="")
+        img(src="./images/Description9.png", alt="")
+        .details-description-dropdown 
+         span Style
+         img(src="./images/Description10.png", alt="")
+       .details-description-main 
+        input.details-description-main-input(type="text")
+        img.details-description-icon(src="./images/Description11.png", alt="")
+      .details-keywords
+       .details-keywords-heading Keywords
+       .details-keywords-main  
+        .details-keywords-header 
+         .details-keywords-title design resources
+         .details-keywords-title web design
+         .details-keywords-title ui design
+         .details-keywords-title web ui  
+         .details-keywords-title web app designs
+        .details-keywords-body
+         input.details-keywords-input(type="text" placehoder="Type and press enter")
+      .details-explicit
+       .details-explicit-title Explicit content
+       .details-explicit-body 
+        +toogle2("Episode has explicit content")
+    .release
+     .release-header 
+      .release-heading Episode Details
+      .release-sub-heading Only public episodes are listed in your RSS feed, drafts will never be shown and private episodes are only accessible directly by link for review
+     .release-checkbox 
+      +releaseCheckbox("Draft","Episode is currently in draft stage")
+      +releaseCheckbox("Private","The episode is not listed and only people with a link can listen")
+      +releaseCheckbox("Public","If not set the episode will be released immediately")
+    .release-heading Lunch date
+    .release-sub-heading If not set the episode will be released immediately
+    .details-explicit-body
+     +toogle2("Episode has explicit content")
+    .release-footer
+     .release-buttom
+      p Upload
+     p It can take few minutes to upload the audio  
+   .upload-clone   

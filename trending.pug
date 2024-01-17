@@ -1,0 +1,8 @@
+extends ./views/layout/_dashboard
+append stylesheet
+ link(rel="stylesheet", href="./style/trending.css")
+block main
+ .trending-header-title Trending Podcast
+ .trending
+  include ./views/module/trending/_trending-posdcart.pug
+  include ./views/module/trending/_trending-episdes.pug

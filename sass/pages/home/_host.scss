@@ -1,0 +1,82 @@
+@use "../../utils/index" as ut;
+
+.host {
+  &-list {
+    padding-bottom: 28px;
+    list-style-type: none;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+  }
+
+  &-item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 6px;
+    --avt-size: 44px;
+
+    @include ut.screenMW(768px) {
+      gap: 7px;
+      --avt-size: 64px;
+    }
+
+  }
+
+  &-avt {
+    display: flex;
+    justify-content: center;
+    border-radius: 100rem;
+    overflow: hidden;
+    @include ut.size(var(--avt-size));
+    position: relative;
+    background-color: var(--color);
+    box-shadow: 0 0 0 2px var(--bg-body-color), 0 0 0 3px var(--color);
+
+    img {
+      position: relative;
+      z-index: 2;
+    }
+
+  }
+
+  &-heading {
+    --mb: 20px;
+  }
+
+  &-name {
+    font-size: 14;
+    color: (var(--host-name), ut.$gray1);
+    line-height: 20px;
+  }
+
+  @media (max-width: 767px){
+    padding-bottom: 0;
+  }
+
+  @container mainContainer (max-width:450px){
+    &-heading{
+      margin-bottom: 12px;
+    }
+    &-list{
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: 75px;
+      overflow-x: auto;
+      overflow-y: hidden;
+      scroll-snap-type: x mandatory;
+      scroll-snap-stop: always;
+      &::-webkit-scrollbar {
+        display: none;
+        width: 0;
+      }
+      & > *{
+        scroll-snap-align: start;
+      }
+     
+    }
+  }
+
+
+}

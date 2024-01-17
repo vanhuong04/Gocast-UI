@@ -1,0 +1,7 @@
+@use '../utils' as ut;
+
+body{
+    font-family: ut.$font-primary;
+    font-weight: 400;
+    font-size: 15px;
+}

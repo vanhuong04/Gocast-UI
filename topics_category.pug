@@ -1,0 +1,33 @@
+extends ./views/layout/_dashboard
+append stylesheet
+ link(rel="stylesheet", href="./style/topics-category.css")
+block main
+ .category-container 
+  .category-left 
+   .category-address 
+    .category-address-one 
+     img(src="./images/topicsaddress1.png", alt="")
+     p Explore Topics
+    .category-address-two 
+     img(src="./images/topicsaddress1.png", alt="")
+     p Religion &amp; Spirituality
+   .category-heading 
+    .category-title Popular Religion &amp; Spirituality podcast episodes
+    .category-title-clone Most listend to podcast
+   .category-list2
+    +topicsCategoty("./images/address1.png","./images/ims1.png","./images/sound1.png")
+    +topicsCategoty("./images/address2.png","./images/ims2.png","./images/sound2.png")
+    +topicsCategoty("./images/address3.png","./images/ims2.png","./images/sound2.png")
+   +topicsCategoty("./images/address4.png","./images/ims2.png","./images/sound2.png")
+  .category-right 
+   .category-title2 Sort Podcast
+   .category-list2
+    +topicsCategory2("./images/pc1.png")
+    +topicsCategory2("./images/pc2.png")
+    +topicsCategory2("./images/pc3.png")
+    +topicsCategory2("./images/pc4.png")
+    +topicsCategory2("./images/pc5.png")
+   buttom.category-buttom See More
+    
+     
+    

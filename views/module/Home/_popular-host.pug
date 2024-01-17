@@ -1,0 +1,9 @@
+link(rel="stylesheet", href="./style/home.css")
+.host 
+  h2.heading.host-heading Popular Hosts
+  ul.host-list 
+   each user in [{name:"Thomas",color: "#FFBAA5"},{name:"Darrell",color: "#FFD381"},{name:"Arlene",color: "#B6AEE9"},{name:"Kristin",color: "#FFB5CD"},{name:"Courtney",color: "#FFE2AB"},{name:"Cody",color: "#FFC7D9"},{name:"Arlene",color: "#B6AEE9"}]
+    li.host-item 
+     .host-avt(style=`--color: ${user.color}`)
+      img(src="./images/avt.png", alt="avt")
+     span.host-name= user.name
